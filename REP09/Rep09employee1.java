@@ -6,7 +6,7 @@ class Person {
 
     // 생성자 + 기본 생성자 모두 구현
     public Person(){
-        name == "";
+        name = "";
     }
 
     public Person(String name){
