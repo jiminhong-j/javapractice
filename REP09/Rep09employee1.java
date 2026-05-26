@@ -68,7 +68,7 @@ public class Rep09employee1 {
 
         // 사용자로부터 직원수 입력받기
         int count;
-        System.out.print("How many employee? (max 10): ");
+        System.out.print("How many employees? (max 10): ");
         count = s.nextInt();
         s.nextLine();
 
@@ -76,11 +76,11 @@ public class Rep09employee1 {
         for(int i = 0; i < count; i++){
             System.out.println();
             System.out.println("Entering data for employee " + (i+1));
-            System.out.println("Enter name: ");
+            System.out.print("Enter name: ");
             String name = s.nextLine();
-            System.out.println("Enter SSN (no dashes or spaces): ");
+            System.out.print("Enter SSN (no dashes or spaces): ");
             String ssn = s.nextLine();
-            System.out.println("Enter salary: ");
+            System.out.print("Enter salary: ");
             double salary = s.nextDouble();
             s.nextLine();
 
