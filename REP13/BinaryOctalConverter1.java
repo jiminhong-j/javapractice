@@ -11,31 +11,32 @@ public class BinaryOctalConverter1 extends JFrame {
 
     public BinaryOctalConverter1() {
         setTitle("Binary/Octal convertor");
-        setSize(600, 220);
+        setSize(700, 230);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        inputField = new JTextField("Enter value here");
+        inputField = new JTextField("Enter value here", 40);
 
         resultLabel = new JLabel("");
-        resultLabel.setFont(new Font("Arial", Font.BOLD, 18));
 
-        toBinaryButton = new JButton("Converet to binary");
+        toBinaryButton = new JButton("Convert to binary");
         toOctalButton = new JButton("Convert to octal");
         clearButton = new JButton("Clear");
 
+        JPanel leftPanel = new JPanel(new BorderLayout());
+        leftPanel.add(inputField, BorderLayout.NORTH);
+        leftPanel.add(resultLabel, BorderLayout.CENTER);
+
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridLayout(3, 1, 10, 10));
+        buttonPanel.setLayout(new GridLayout(3, 1, 0, 35));
         buttonPanel.add(toBinaryButton);
         buttonPanel.add(toOctalButton);
         buttonPanel.add(clearButton);
 
-        JPanel resultPanel = new JPanel();
-        resultPanel.setLayout(new BorderLayout());
-        resultPanel.add(resultLabel, BorderLayout.CENTER);
+        JPanel rightPanel = new JPanel(new FlowLayout());
+        rightPanel.add(buttonPanel);
 
-        add(inputField, BorderLayout.NORTH);
-        add(resultPanel, BorderLayout.CENTER);
+        add(leftPanel, BorderLayout.CENTER);
         add(buttonPanel, BorderLayout.EAST);
 
         setLocationRelativeTo(null);
